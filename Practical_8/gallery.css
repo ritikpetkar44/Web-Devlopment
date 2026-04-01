@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: radial-gradient(circle at top left, #1b486e, #0f2a40 50%, #05101f);
+    color: #ecf0f3;
+}
+
+header {
+    padding: 30px 20px 5px;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #f1c40f;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    margin: 0;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: 20px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 10px;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.image-box {
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+.image-box img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.image-box::after {
+    content: attr(data-title) "\A" attr(data-description) "\A" "Source: " attr(data-source);
+    white-space: pre-wrap;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    position: absolute;
+    inset: auto 0 0 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72));
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    color: #ffffff;
+    padding: 12px 14px 14px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 600;
+    border-radius: 0 0 18px 18px;
+    max-height: 43%;
+    box-sizing: border-box;
+}
+
+.image-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.5);
+    filter: saturate(1.08);
+}
+
+.image-box:hover::after {
+    opacity: 1;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.92);
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .image-box {
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
