@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tribute Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1520975922284-9e0f1c9c8c7a');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Overlay for readability */
+        .overlay {
+            background: rgba(255,255,255,0.85);
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(13, 71, 161, 0.9);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+            transform: scale(1.1);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to right, #2196f3, #0d47a1);
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 45px;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .sidebar:hover {
+            transform: translateY(-5px);
+        }
+
+        .content {
+            width: 70%;
+        }
+
+        .box {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #0d47a1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #0d47a1;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#achievements">Achievements</a>
+    </nav>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Sir M. Visvesvaraya</h1>
+        <p>Engineer of India</p>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Quick Info</h3>
+            <p><b>Born:</b> 1931</p>
+            <p><b>Died:</b> 2015</p>
+            <p><b>Profession:</b> Scientist, President</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <div class="box" id="about">
+                <h2>About</h2>
+                <p>
+                    Sir M. Visvesvaraya was one of India's greatest engineers and a statesman. He played a key role in developing modern engineering infrastructure in India and contributed to building               </p>
+            </div>
+
+            <div class="box" id="achievements">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Engineer of India</li>
+                    <li>Worked with ISRO & DRDO</li>
+                    <li>Bharat Ratna Awardee</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed by Student | Tribute Page</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
