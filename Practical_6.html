@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1zz8rxYyeOLo13fhks0YM3KBBl0hCUVfWw&s');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+.btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #343d36;
+}
+
+.reset-btn {
+    background-color: #dc3545;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Registration Form</h2>
+
+<form action="#" method="post">
+
+<label>First Name:</label>
+<input type="text" name="firstname" placeholder="Enter your first name" required>
+
+<label>Last Name:</label>
+<input type="text" name="lastname" placeholder="Enter your last name" required>
+
+<label>Email:</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Password:</label>
+<input type="password" name="password" placeholder="Enter password" required>
+
+<label>Confirm Password:</label>
+<input type="password" name="confirm_password" placeholder="Confirm password" required>
+
+<label>Gender:</label><br>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+<br><br>
+
+<label>Hobbies:</label><br>
+<input type="checkbox" name="hobby" value="reading"> Reading
+<input type="checkbox" name="hobby" value="sports"> Sports
+<input type="checkbox" name="hobby" value="music"> Music
+
+<br><br>
+
+<label>Date of Birth:</label>
+<input type="date" name="dob">
+
+<label>City:</label>
+<select name="city">
+<option>Choose City</option>
+<option>Mumbai</option>
+<option>Pune</option>
+<option>Delhi</option>
+</select>
+
+<label>Address:</label>
+<textarea rows="3" placeholder="Enter your address"></textarea>
+
+<br><br>
+
+<input type="submit" value="Register" class="btn submit-btn">
+<input type="reset" value="Reset" class="btn reset-btn">
+
+</form>
+
+</div>
+
+</body>
+</html>
