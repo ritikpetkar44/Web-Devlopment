@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Webpage</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: #1e2214;
+    color: rgb(219, 151, 24);
+    padding: 15px;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background: #e07e7e;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* Multi-column */
+.content {
+    padding: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+/* Cards */
+.card {
+    display: inline-block;
+    background: rgb(176, 121, 212);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(201, 52, 52, 0.3);
+    transition: 0.3s;
+}
+
+/* Hover transform */
+.card:hover {
+    transform: scale(1.6);
+}
+
+/* Animation */
+.box {
+    width: 40px;
+    height: 40px;
+    background: rgb(62, 121, 145);
+    margin: 20px auto;
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+    from { transform: translateX(0); }
+    to { transform: translateX(150px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content {
+        column-count: 1;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Webpage</h1>
+</header>
+
+<nav>
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-user"></i> About</a>
+    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<div class="content">
+    <p>
+        This is a responsive webpage using CSS3 features like multiple columns,
+        fonts, icons, animations, and transformations. Resize the screen to see
+        responsive behavior.
+    </p>
+</div>
+
+<div style="text-align:center;">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+</div>
+
+<div class="box"></div>
+
+</body>
+</html>
