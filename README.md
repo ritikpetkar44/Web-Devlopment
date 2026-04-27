@@ -1,64 +1,93 @@
-# Web-Devlopment
-PRE-LAB
 
-AIM: Create a GitHub account and demonstrate repository creation, file
-upload, and version management for web projects.
-<br>
-<br>
+🚀 Web Development Lab Repository
+✨ Crafted with passion by Yash
+🧠 About This Repository
 
-Practical No. 2
+This repository showcases a complete journey through modern web development fundamentals — starting from basic HTML structure to building fully responsive websites using CSS3 and Bootstrap.
 
-Aim: Study the structure of HTML5 document and explore new semantic elements
-(header, footer, section, article).
-<br>
-<br>
+Each practical is designed to strengthen both conceptual understanding and hands-on development skills.
+📁 Web-Dev-Lab
+ ┣ 📁 Practical-2
+ ┣ 📁 Practical-3
+ ┣ 📁 Practical-4
+ ┣ 📁 ...
+ ┗ 📁 Practical-13
+📚 Practicals Overview
+🧪 Pre-Lab
 
-Practical No. 3
+🔹 Setting up GitHub environment
+🔹 Repository creation & version control workflow
 
-Aim: Design a basic webpage using HTML5 elements such as text
-formatting, lists (ordered, unordered, and description lists) and
-hyperlinks (internal, external, and email links), marquee and images.
+🏗️ HTML5 Foundations
+📌 Practical 2 — Structure & Semantics
 
-<br>
-<br>
-Practical No. 4
+Understanding the backbone of web pages using semantic elements like
+<header>, <footer>, <section>, <article>
 
-Aim: Develop a webpage to display tabular data (Timetable / Student
-Record) using advanced table tags and attributes.
+🎨 Practical 3 — Basic Webpage Design
 
-<br>
-<br>
-Practical No. 5
+Working with:
+✔ Text formatting
+✔ Lists & hyperlinks
+✔ Images & marquee effects
 
-Aim: Design a resume webpage using HTML5 with image, list, table, and hyperlink 
-integration.
+📊 Practical 4 — Tables
 
-<br>
-<br>
-Practical No. 6
+Creating structured data layouts such as:
+🗓️ Timetables
+🎓 Student records
 
-Aim: Implement a scholarship / seminar registration form using field
-set, input field, legend, radio buttons, checkboxes, drop-down list.
+👨‍💼 Practical 5 — Resume Webpage
 
-<br>
-<br>
-Practical No. 7
+Designing a professional resume using HTML elements and layout techniques
 
-Aim: Develop a tribute / profile page using Internal CSS for styling text,
-borders, background, Navigation Bar and layout.
-<br>
-<br>
+📝 Practical 6 — Forms
 
-Practical No. 8
+Building interactive forms with:
+✔ Fieldsets & legends
+✔ Input types
+✔ Selection controls
 
-Aim: Create an image gallery webpage using External CSS with hover
-effects, gradients and transitions
+🎨 CSS Styling & Design
+🎭 Practical 7 — Tribute Page
 
-<br>
-<br>
-Practical No. 9
+Applying Internal CSS for layout, navigation, and visual styling
 
-Aim: Design a responsive webpage using CSS3 features such as
-multiple columns, fonts. icons, animations, and transformations.
-<br>
-<br>
+🖼️ Practical 8 — Image Gallery
+
+Enhancing UI using:
+✨ Hover effects
+🎨 Gradients
+⚡ Smooth transitions
+
+📱 Practical 9 — Responsive Design
+
+Using CSS3 features like:
+📐 Flexibility & columns
+🎬 Animations & transforms
+🔤 Custom fonts & icons
+
+🌐 Advanced Web Concepts
+🖥️ Practical 10 — Frames & Embedding
+
+Working with iframes to integrate maps and external content
+
+⚙️ Practical 11 — HTML5 APIs
+
+Implementing modern browser APIs:
+📍 Geolocation
+🖱️ Drag & Drop
+💾 Web Storage
+
+⚡ Bootstrap Development
+🎯 Practical 12 — Bootstrap Components
+
+Creating UI using:
+🧭 Navbar | 🎠 Carousel | 🃏 Cards
+🔘 Buttons | 📦 Grid | 🔚 Footer
+
+🌍 Practical 13 — Mini Responsive Website
+
+Building a complete responsive site with:
+📋 Forms | 💬 Modal | 📂 Dropdown
+🍞 Breadcrumb | 📱 Multi-device support
