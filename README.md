@@ -1,93 +1,143 @@
-click to view :- https://ritikpetkar44.github.io/Web-Devlopment/
-🚀 Web Development Lab Repository
-✨ Crafted with passion by Yash
-🧠 About This Repository
+# 🚀 Web Development Lab Repository
+
+✨ Crafted with passion by **Yash Petkar**
+
+---
+
+## 🧠 About This Repository
 
 This repository showcases a complete journey through modern web development fundamentals — starting from basic HTML structure to building fully responsive websites using CSS3 and Bootstrap.
 
 Each practical is designed to strengthen both conceptual understanding and hands-on development skills.
-📁 Web-Dev-Lab
- ┣ 📁 Practical-2
- ┣ 📁 Practical-3
- ┣ 📁 Practical-4
- ┣ 📁 ...
- ┗ 📁 Practical-13
-📚 Practicals Overview
-🧪 Pre-Lab
 
-🔹 Setting up GitHub environment
-🔹 Repository creation & version control workflow
+---
 
-🏗️ HTML5 Foundations
-📌 Practical 2 — Structure & Semantics
+## 📁 Project Structure
+Web-Dev-Lab/
+┣ 📁 Practical-2
+┣ 📁 Practical-3
+┣ 📁 Practical-4
+┣ 📁 ...
+┗ 📁 Practical-13
 
-Understanding the backbone of web pages using semantic elements like
-<header>, <footer>, <section>, <article>
+---
 
-🎨 Practical 3 — Basic Webpage Design
+## 📚 Practicals Overview
 
-Working with:
-✔ Text formatting
-✔ Lists & hyperlinks
-✔ Images & marquee effects
+### 🧪 Pre-Lab
+- Setting up GitHub environment  
+- Repository creation & version control workflow  
 
-📊 Practical 4 — Tables
+---
 
-Creating structured data layouts such as:
-🗓️ Timetables
-🎓 Student records
+### 🏗️ HTML5 Foundations
 
-👨‍💼 Practical 5 — Resume Webpage
+#### 📌 Practical 2 — Structure & Semantics
+Understanding semantic elements like:
+- `<header>`
+- `<footer>`
+- `<section>`
+- `<article>`
 
-Designing a professional resume using HTML elements and layout techniques
+---
 
-📝 Practical 6 — Forms
+#### 🎨 Practical 3 — Basic Webpage Design
+- Text formatting  
+- Lists & hyperlinks  
+- Images & marquee effects  
 
-Building interactive forms with:
-✔ Fieldsets & legends
-✔ Input types
-✔ Selection controls
+---
 
-🎨 CSS Styling & Design
-🎭 Practical 7 — Tribute Page
+#### 📊 Practical 4 — Tables
+- Timetables  
+- Student records  
 
-Applying Internal CSS for layout, navigation, and visual styling
+---
 
-🖼️ Practical 8 — Image Gallery
+#### 👨‍💼 Practical 5 — Resume Webpage
+Professional resume design using HTML layout
 
-Enhancing UI using:
-✨ Hover effects
-🎨 Gradients
-⚡ Smooth transitions
+---
 
-📱 Practical 9 — Responsive Design
+#### 📝 Practical 6 — Forms
+- Input fields  
+- Fieldset & legend  
+- Selection controls  
 
-Using CSS3 features like:
-📐 Flexibility & columns
-🎬 Animations & transforms
-🔤 Custom fonts & icons
+---
 
-🌐 Advanced Web Concepts
-🖥️ Practical 10 — Frames & Embedding
+### 🎨 CSS Styling & Design
 
-Working with iframes to integrate maps and external content
+#### 🎭 Practical 7 — Tribute Page
+Internal CSS layout and styling
 
-⚙️ Practical 11 — HTML5 APIs
+---
 
-Implementing modern browser APIs:
-📍 Geolocation
-🖱️ Drag & Drop
-💾 Web Storage
+#### 🖼️ Practical 8 — Image Gallery
+- Hover effects  
+- Smooth transitions  
+- Gradient design  
 
-⚡ Bootstrap Development
-🎯 Practical 12 — Bootstrap Components
+---
 
-Creating UI using:
-🧭 Navbar | 🎠 Carousel | 🃏 Cards
-🔘 Buttons | 📦 Grid | 🔚 Footer
+#### 📱 Practical 9 — Responsive Design
+- Media queries  
+- Flexbox & Grid  
+- Animations  
 
-🌍 Practical 13 — Mini Responsive Website
+---
 
-Building a complete responsive site with:
-📋 Forms | 💬 Modal | 📂 Dropdown
-🍞 Breadcrumb | 📱 Multi-device support
+### 🌐 Advanced Concepts
+
+#### 🖥️ Practical 10 — Frames & Embedding
+- iframe usage  
+- External content integration  
+
+---
+
+#### ⚙️ Practical 11 — HTML5 APIs
+- Geolocation  
+- Drag & Drop  
+- Web Storage  
+
+---
+
+### ⚡ Bootstrap Development
+
+#### 🎯 Practical 12 — Bootstrap Components
+- Navbar  
+- Carousel  
+- Cards  
+- Buttons  
+- Grid system  
+
+---
+
+#### 🌍 Practical 13 — Responsive Website
+- Forms  
+- Modal  
+- Dropdown  
+- Breadcrumb  
+- Mobile responsive layout  
+
+---
+
+## 🚀 Live Project
+
+👉 Click to view:  
+https://ritikpetkar44.github.io/Web-Devlopment/
+
+---
+
+## ✨ Key Features
+- Beginner to Advanced progression  
+- Hands-on practical implementation  
+- Clean UI designs  
+- Responsive web layouts  
+
+---
+
+## 🧑‍💻 Author
+**Yash Petkar**  
+🔗 GitHub: [ritikpetkar44](https://github.com/ritikpetkar44)  
+🔗 LinkedIn: [Yash Petkar](https://www.linkedin.com/in/yash-petkar-725b76386/)
