@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 APIs</title>
+
+<style>
+body { font-family: Arial; text-align: center; }
+section { margin: 20px; padding: 15px; border: 1px solid #ccc; }
+#dragBox { width: 80px; height: 80px; background: green; color: white; line-height: 80px; margin: auto; }
+#dropZone { height: 120px; border: 2px dashed gray; margin-top: 10px; line-height: 120px; }
+button { margin: 5px; padding: 5px 10px; }
+</style>
+
+</head>
+<body>
+
+<h1>HTML5 APIs</h1>
+
+<section>
+<h3>Drag & Drop</h3>
+<div id="dragBox" draggable="true" ondragstart="drag(event)">Drag</div>
+<div id="dropZone" ondragover="allowDrop(event)" ondrop="drop(event)">Drop Here</div>
+</section>
+
+<section>
+<h3>Geolocation</h3>
+<button onclick="getLocation()">Get Location</button>
+<p id="loc"></p>
+</section>
+
+<section>
+<h3>Web Storage</h3>
+<input type="text" id="data">
+<br>
+<button onclick="save()">Save</button>
+<button onclick="load()">Load</button>
+<p id="out"></p>
+</section>
+
+<script>
+// Drag & Drop
+function allowDrop(e) {
+    e.preventDefault();
+}
+
+function drag(e) {
+    e.dataTransfer.setData("text", e.target.id);
+}
+
+function drop(e) {
+    e.preventDefault();
+    var id = e.dataTransfer.getData("text");
+    e.target.appendChild(document.getElementById(id));
+}
+
+// Geolocation
+function getLocation() {
+    navigator.geolocation.getCurrentPosition(show);
+}
+
+function show(pos) {
+    document.getElementById("loc").innerHTML =
+        "Lat: " + pos.coords.latitude +
+        "<br>Lon: " + pos.coords.longitude;
+}
+
+// Storage
+function save() {
+    var x = document.getElementById("data").value;
+    localStorage.setItem("data", x);
+}
+
+function load() {
+    document.getElementById("out").innerHTML =
+        localStorage.getItem("data");
+}
+</script>
+
+</body>
+</html>

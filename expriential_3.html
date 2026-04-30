@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NOTEPAD</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #121212;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  background: #1f1f1f;
+}
+
+.toolbar {
+  text-align: center;
+  padding: 10px;
+  background: #2a2a2a;
+}
+
+.toolbar button {
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.toolbar button:hover {
+  background: #00c3ff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.editor {
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  color: black;
+  outline: none;
+  font-size: 16px;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #1f1f1f;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NOTEPAD</h1>
+</header>
+
+<!-- TOOLBAR -->
+<div class="toolbar">
+  <button onclick="cmd('bold')"><b>B</b></button>
+  <button onclick="cmd('italic')"><i>I</i></button>
+  <button onclick="cmd('underline')"><u>U</u></button>
+
+  <button onclick="cmd('undo')">Undo</button>
+  <button onclick="cmd('redo')">Redo</button>
+
+  <button onclick="saveFile()">Save</button>
+   <label class="file-btn">
+    <span style="background: #00c3ff; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer;">Open</span>
+    <input type="file" style="display: none;" onchange="openFile(event)">
+  </label>
+
+</div>
+<!-- EDITOR -->
+<div class="editor" contenteditable="true" id="editor">
+Start writing here...
+</div>
+
+<footer>
+  Simple Notepad using HTML + CSS + JS
+</footer>
+
+<script>
+
+/* TEXT FORMATTING */
+function cmd(command) {
+  document.execCommand(command, false, null);
+}
+
+/* SAVE FILE */
+function saveFile() {
+  let text = document.getElementById("editor").innerText;
+  let blob = new Blob([text], {type: "text/plain"});
+  let link = document.createElement("a");
+
+  link.href = URL.createObjectURL(blob);
+  link.download = "notepad.txt";
+  link.click();
+}
+
+/* OPEN FILE */
+function openFile(event) {
+  let file = event.target.files[0];
+  let reader = new FileReader();
+
+  reader.onload = function(e) {
+    document.getElementById("editor").innerText = e.target.result;
+  };
+
+  reader.readAsText(file);
+}
+
+</script>
+
+</body>
+</html>
