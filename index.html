@@ -1,91 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Practicals</title>
+<meta charset="UTF-8">
+<title>My Practicals Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        h1 {
-            margin-top: 40px;
-            font-size: 40px;
-            animation: fadeIn 2s ease-in-out;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    display:flex;
+}
 
-        li {
-            margin: 10px;
-        }
+/* SIDEBAR */
+.sidebar{
+    width:260px;
+    min-height:100vh;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px 20px;
+    border-right:1px solid rgba(255,255,255,0.1);
+}
 
-        a {
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 25px;
-            border-radius: 30px;
-            display: inline-block;
-            transition: 0.3s;
-        }
+/* NAME */
+.name{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:600;
+    color:#00e5ff;
+    text-align:center;
+}
 
-        a:hover {
-            background: white;
-            color: #2a5298;
-            transform: scale(1.1);
-        }
+/* LINKS */
+.links{
+    margin-top:15px;
+    text-align:center;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+.links a{
+    display:block;
+    text-decoration:none;
+    color:#cfd8dc;
+    margin:6px 0;
+    font-size:14px;
+    transition:0.3s;
+}
 
+.links a:hover{
+    color:#00e5ff;
+}
+
+/* MAIN CONTENT */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* TITLE */
+.main-title{
+    font-size:34px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/* SECTION TITLE */
+.section-title{
+    font-size:24px;
+    margin:20px 0 10px;
+    border-left:4px solid #00e5ff;
+    padding-left:10px;
+}
+
+/* GRID */
+ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    padding:20px 0;
+    list-style:none;
+}
+
+/* CARD */
+li a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+/* TITLE */
+.card-title{
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+/* DESCRIPTION (IMPROVED) */
+.card-desc{
+    font-size:13px;
+    margin-top:10px;
+    color:#bfefff;
+    opacity:0;
+    transform:translateY(12px);
+    transition:0.4s ease;
+    line-height:1.4;
+}
+
+/* HOVER EFFECT */
+li a:hover{
+    transform:translateY(-10px) scale(1.05);
+    background:rgba(0,229,255,0.18);
+    border:1px solid #00e5ff;
+    box-shadow:0 10px 25px rgba(0,229,255,0.4);
+}
+
+/* TITLE HOVER */
+li a:hover .card-title{
+    transform:translateY(-4px);
+    color:#00e5ff;
+    letter-spacing:0.5px;
+}
+
+/* DESCRIPTION SHOW */
+li a:hover .card-desc{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    body{
+        flex-direction:column;
+    }
+    .sidebar{
+        width:100%;
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <h1>My Web Design Practicals</h1>
+<!-- SIDEBAR -->
+<div class="sidebar">
 
-    <ul>
-        <li><a href="Practical_01.html">Practical 1</a></li>
-        <li><a href="Practical_02.html">Practical 2</a></li>
-        <li><a href="Practical_03.html">Practical 3</a></li>
-        <li><a href="Practical_04.html">Practical 4</a></li>
-        <li><a href="Practical_05.html">Practical 5</a></li>
-        <li><a href="Practical_06.html">Practical 6</a></li>
-        <li><a href="Practical_07.html">Practical 7</a></li>
-        <li><a href="Practical_8/yash.html">Practical 8</a></li>
-        <li><a href="Practical_09.html">Practical 9</a></li>
-         <li><a href="Practical_10.html">Practical 10</a></li>
-         <li><a href="Practical_11.html">Practical 11</a></li>
-         <li><a href="Practical_12.html">Practical 12</a></li>
-         <li><a href="Practical_13.html">Practical 13</a></li>
-        <li><a href="expriential_1.html">Exprirential 
-Elementary</a></li>
-        <li><a href="expriential_2.html">Exprirential Intermediate</a></li>
-        <li><a href="expriential_3.html">Exprirential Advance</a></li>
-    </ul>
+    <div class="name">
+        <h3>Created by</h3>
+        <hr>
+        <br>MR. YASH PETKAR
+    </div>
+
+    <div class="links">
+        <a href="https://github.com/ritikpetkar44" target="_blank">GitHub : ritikpetkar44</a>
+        <a href="https://www.linkedin.com/in/yash-petkar-725b76386/" target="_blank">LinkedIn : Yash Petkar</a>
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<h1 class="main-title">My Web Design Practicals</h1>
+
+<h2 class="section-title">Practicals</h2>
+
+<ul>
+<li><a href="#"><div class="card-title">Practical 1</div><div class="card-desc">GitHub setup & repository creation for version control workflow</div></a></li>
+<li><a href="#"><div class="card-title">Practical 2</div><div class="card-desc">HTML structure using semantic elements like header, footer, section</div></a></li>
+<li><a href="#"><div class="card-title">Practical 3</div><div class="card-desc">Text formatting, images, lists and hyperlink integration</div></a></li>
+<li><a href="#"><div class="card-title">Practical 4</div><div class="card-desc">Table creation for structured data like timetable and records</div></a></li>
+<li><a href="#"><div class="card-title">Practical 5</div><div class="card-desc">Resume webpage design using HTML layout concepts</div></a></li>
+<li><a href="#"><div class="card-title">Practical 6</div><div class="card-desc">Forms with input fields, validation and selection controls</div></a></li>
+<li><a href="#"><div class="card-title">Practical 7</div><div class="card-desc">CSS tribute page with layout and styling effects</div></a></li>
+<li><a href="#"><div class="card-title">Practical 8</div><div class="card-desc">Image gallery with hover effects and transitions</div></a></li>
+<li><a href="#"><div class="card-title">Practical 9</div><div class="card-desc">Responsive design using CSS media queries and flex/grid</div></a></li>
+<li><a href="#"><div class="card-title">Practical 10</div><div class="card-desc">Embedding external content using iframe</div></a></li>
+<li><a href="#"><div class="card-title">Practical 11</div><div class="card-desc">HTML5 APIs like geolocation, drag-drop and storage</div></a></li>
+<li><a href="#"><div class="card-title">Practical 12</div><div class="card-desc">Bootstrap components for modern UI design</div></a></li>
+<li><a href="#"><div class="card-title">Practical 13</div><div class="card-desc">Complete responsive website project</div></a></li>
+</ul>
+
+<h2 class="section-title">Experiential Learning</h2>
+
+<ul>
+<li><a href="#"><div class="card-title">Elementary</div><div class="card-desc">Basic web development concepts and structure</div></a></li>
+<li><a href="#"><div class="card-title">Intermediate</div><div class="card-desc">UI design and layout building skills</div></a></li>
+<li><a href="#"><div class="card-title">Advanced</div><div class="card-desc">Full responsive project development</div></a></li>
+</ul>
+
+</div>
 
 </body>
 </html>
