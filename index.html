@@ -34,7 +34,6 @@ body{
     border-right:1px solid rgba(255,255,255,0.1);
 }
 
-/* NAME */
 .name{
     margin-top:20px;
     font-size:18px;
@@ -43,7 +42,6 @@ body{
     text-align:center;
 }
 
-/* LINKS */
 .links{
     margin-top:15px;
     text-align:center;
@@ -62,20 +60,18 @@ body{
     color:#00e5ff;
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main{
     flex:1;
     padding:30px;
 }
 
-/* TITLE */
 .main-title{
     font-size:34px;
     margin-bottom:20px;
     text-align:center;
 }
 
-/* SECTION TITLE */
 .section-title{
     font-size:24px;
     margin:20px 0 10px;
@@ -83,7 +79,6 @@ body{
     padding-left:10px;
 }
 
-/* GRID */
 ul{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -92,7 +87,6 @@ ul{
     list-style:none;
 }
 
-/* CARD */
 li a{
     display:block;
     text-decoration:none;
@@ -105,14 +99,12 @@ li a{
     transition:0.3s;
 }
 
-/* TITLE */
 .card-title{
     font-size:18px;
     font-weight:600;
     transition:0.3s;
 }
 
-/* DESCRIPTION (IMPROVED) */
 .card-desc{
     font-size:13px;
     margin-top:10px;
@@ -120,10 +112,8 @@ li a{
     opacity:0;
     transform:translateY(12px);
     transition:0.4s ease;
-    line-height:1.4;
 }
 
-/* HOVER EFFECT */
 li a:hover{
     transform:translateY(-10px) scale(1.05);
     background:rgba(0,229,255,0.18);
@@ -131,20 +121,11 @@ li a:hover{
     box-shadow:0 10px 25px rgba(0,229,255,0.4);
 }
 
-/* TITLE HOVER */
-li a:hover .card-title{
-    transform:translateY(-4px);
-    color:#00e5ff;
-    letter-spacing:0.5px;
-}
-
-/* DESCRIPTION SHOW */
 li a:hover .card-desc{
     opacity:1;
     transform:translateY(0);
 }
 
-/* MOBILE */
 @media(max-width:768px){
     body{
         flex-direction:column;
@@ -161,23 +142,20 @@ li a:hover .card-desc{
 
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
-
     <div class="name">
         <h3>Created by</h3>
+        <br>
+        MR. YASH PETKAR
         <hr>
-        <br>MR. YASH PETKAR
     </div>
 
     <div class="links">
-        <a href="https://github.com/ritikpetkar44" target="_blank">GitHub : ritikpetkar44</a>
-        <a href="https://www.linkedin.com/in/yash-petkar-725b76386/" target="_blank">LinkedIn : Yash Petkar</a>
+        <a href="https://github.com/ritikpetkar44" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
     </div>
-
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main">
 
 <h1 class="main-title">My Web Design Practicals</h1>
@@ -185,29 +163,57 @@ li a:hover .card-desc{
 <h2 class="section-title">Practicals</h2>
 
 <ul>
-<li><a href="#"><div class="card-title">Practical 1</div><div class="card-desc">GitHub setup & repository creation for version control workflow</div></a></li>
-<li><a href="#"><div class="card-title">Practical 2</div><div class="card-desc">HTML structure using semantic elements like header, footer, section</div></a></li>
-<li><a href="#"><div class="card-title">Practical 3</div><div class="card-desc">Text formatting, images, lists and hyperlink integration</div></a></li>
-<li><a href="#"><div class="card-title">Practical 4</div><div class="card-desc">Table creation for structured data like timetable and records</div></a></li>
-<li><a href="#"><div class="card-title">Practical 5</div><div class="card-desc">Resume webpage design using HTML layout concepts</div></a></li>
-<li><a href="#"><div class="card-title">Practical 6</div><div class="card-desc">Forms with input fields, validation and selection controls</div></a></li>
-<li><a href="#"><div class="card-title">Practical 7</div><div class="card-desc">CSS tribute page with layout and styling effects</div></a></li>
-<li><a href="#"><div class="card-title">Practical 8</div><div class="card-desc">Image gallery with hover effects and transitions</div></a></li>
-<li><a href="#"><div class="card-title">Practical 9</div><div class="card-desc">Responsive design using CSS media queries and flex/grid</div></a></li>
-<li><a href="Practical_10"><div class="card-title">Practical_10</div><div class="card-desc">Embedding external content using iframe</div></a></li>
-<li><a href="#"><div class="card-title">Practical 11</div><div class="card-desc">HTML5 APIs like geolocation, drag-drop and storage</div></a></li>
-<li><a href="#"><div class="card-title">Practical 12</div><div class="card-desc">Bootstrap components for modern UI design</div></a></li>
-<li><a href="#"><div class="card-title">Practical 13</div><div class="card-desc">Complete responsive website project</div></a></li>
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_01.html" target="_blank"><div class="card-title">Practical 1</div><div class="card-desc">GitHub setup & repository creation for version control workflow</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_02.html" target="_blank"><div class="card-title">Practical 2</div><div class="card-desc">HTML structure using semantic elements like header, footer, section</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_03.html" target="_blank"><div class="card-title">Practical 3</div><div class="card-desc">Text formatting, images, lists and hyperlink integration</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_04.html" target="_blank"><div class="card-title">Practical 4</div><div class="card-desc">Table creation for structured data like timetable and records</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_05.html" target="_blank"><div class="card-title">Practical 5</div><div class="card-desc">Resume webpage design using HTML layout concepts</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_06.html" target="_blank"><div class="card-title">Practical 6</div><div class="card-desc">Forms with input fields, validation and selection controls</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_07.html" target="_blank"><div class="card-title">Practical 7</div><div class="card-desc">CSS tribute page with layout and styling effects</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_8.html" target="_blank"><div class="card-title">Practical 8</div><div class="card-desc">Image gallery with hover effects and transitions<</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_09.html" target="_blank"><div class="card-title">Practical 9</div><div class="card-desc">Responsive design using CSS media queries and flex/grid<</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_10.html" target="_blank"><div class="card-title">Practical 10</div><div class="card-desc">Embedding external content using iframe</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_11.html" target="_blank"><div class="card-title">Practical 11</div><div class="card-desc">HTML5 APIs like geolocation, drag-drop and storage></div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_12.html" target="_blank"><div class="card-title">Practical 12</div><div class="card-desc">Bootstrap components for modern UI design</div></a></li>
+
+<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_13.html" target="_blank"><div class="card-title">Practical 13</div><div class="card-desc">Complete responsive website project</div></a></li>
 </ul>
 
 <h2 class="section-title">Experiential Learning</h2>
 
 <ul>
-<li><a href="#"><div class="card-title">Elementary</div><div class="card-desc">Basic web development concepts and structure</div></a></li>
-<li><a href="#"><div class="card-title">Intermediate</div><div class="card-desc">UI design and layout building skills</div></a></li>
-<li><a href="#"><div class="card-title">Advanced</div><div class="card-desc">Full responsive project development</div></a></li>
-</ul>
+<li>
+<a href="https://ritikpetkar44.github.io/Web-Devlopment/experiential_1.html" target="_blank">
+<div class="card-title">Elementary</div>
+<div class="card-desc">Basic web development concepts and structure</div>
+</a>
+</li>
 
+<li>
+<a href="https://ritikpetkar44.github.io/Web-Devlopment/experiential_2.html" target="_blank">
+<div class="card-title">Intermediate</div>
+<div class="card-desc">UI design and layout building skills</div>
+</a>
+</li>
+
+<li>
+<a href="https://ritikpetkar44.github.io/Web-Devlopment/experiential_3.html" target="_blank">
+<div class="card-title">Advanced</div>
+<div class="card-desc">Full responsive project development</div>
+</a>
+</li>
+</ul>
 </div>
 
 </body>
