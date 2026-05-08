@@ -2,126 +2,213 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NOTEPAD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Text Editor</title>
 
 <style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+
 body {
-  margin: 0;
-  font-family: Arial;
-  background: #121212;
-  color: white;
+  display:flex;
+  height:100vh;
+  background:linear-gradient(135deg,#eef2f3,#dfe9f3);
 }
 
-header {
-  text-align: center;
-  padding: 15px;
-  background: #1f1f1f;
+body.dark { background:#1e1e2f; color:white; }
+
+/* SIDEBAR */
+.sidebar {
+  width:250px;
+  background:#ffffffcc;
+  backdrop-filter:blur(10px);
+  padding:10px;
+  overflow-y:auto;
 }
 
+body.dark .sidebar { background:#2b2b3d; }
+
+.note {
+  padding:10px;
+  margin-bottom:8px;
+  border-radius:8px;
+  cursor:pointer;
+  background:#f1f1f1;
+  display:flex;
+  justify-content:space-between;
+}
+
+body.dark .note { background:#3a3a50; }
+
+.note:hover { background:#4CAF50; color:white; }
+
+/* MAIN */
+.main {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* TOOLBAR */
 .toolbar {
-  text-align: center;
-  padding: 10px;
-  background: #2a2a2a;
+  padding:10px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+  background:#ffffffcc;
 }
 
-.toolbar button {
-  margin: 5px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition: 0.3s;
+body.dark .toolbar { background:#2b2b3d; }
+
+button {
+  padding:8px 12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
 }
 
-/* Hover effect */
-.toolbar button:hover {
-  background: #00c3ff;
-  color: white;
-  transform: scale(1.1);
-}
+button:hover { background:#4CAF50; color:white; }
 
+/* EDITOR */
 .editor {
-  width: 90%;
-  height: 400px;
-  margin: 20px auto;
-  padding: 10px;
-  background: white;
-  color: black;
-  outline: none;
-  font-size: 16px;
-  border-radius: 8px;
-  overflow-y: auto;
+  flex:1;
+  padding:20px;
+  margin:10px;
+  background:white;
+  border-radius:12px;
+  overflow:auto;
+  outline:none;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #1f1f1f;
+body.dark .editor { background:#2b2b3d; }
+
+/* FOOTER */
+.footer {
+  text-align:center;
+  padding:10px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>NOTEPAD</h1>
-</header>
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h3>📂 Notes</h3>
+  <button onclick="saveNote()">➕ Save Note</button>
+  <div id="notesList"></div>
+</div>
 
-<!-- TOOLBAR -->
+<!-- MAIN -->
+<div class="main">
+
 <div class="toolbar">
-  <button onclick="cmd('bold')"><b>B</b></button>
-  <button onclick="cmd('italic')"><i>I</i></button>
-  <button onclick="cmd('underline')"><u>U</u></button>
-
-  <button onclick="cmd('undo')">Undo</button>
-  <button onclick="cmd('redo')">Redo</button>
-
-  <button onclick="saveFile()">Save</button>
-   <label class="file-btn">
-    <span style="background: #00c3ff; color: white; padding: 8px 15px; border-radius: 6px; cursor: pointer;">Open</span>
-    <input type="file" style="display: none;" onchange="openFile(event)">
-  </label>
-
+  <button onclick="format('bold')"><b>B</b></button>
+  <button onclick="format('italic')"><i>I</i></button>
+  <button onclick="format('underline')"><u>U</u></button>
+  <button onclick="format('removeFormat')">Clear Format</button>
+  <button onclick="clearEditor()">Clear</button>
+  <button onclick="toggleDarkMode()">🌙</button>
 </div>
-<!-- EDITOR -->
+
 <div class="editor" contenteditable="true" id="editor">
-Start writing here...
+Start typing...
 </div>
 
-<footer>
-  Simple Notepad using HTML + CSS + JS
-</footer>
+<div class="footer">
+  Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span>
+</div>
+
+</div>
 
 <script>
+const editor = document.getElementById("editor");
+const notesList = document.getElementById("notesList");
 
-/* TEXT FORMATTING */
-function cmd(command) {
-  document.execCommand(command, false, null);
+/* FORMAT */
+function format(cmd){
+  document.execCommand(cmd,false,null);
 }
 
-/* SAVE FILE */
-function saveFile() {
-  let text = document.getElementById("editor").innerText;
-  let blob = new Blob([text], {type: "text/plain"});
-  let link = document.createElement("a");
-
-  link.href = URL.createObjectURL(blob);
-  link.download = "notepad.txt";
-  link.click();
+/* CLEAR */
+function clearEditor(){
+  editor.innerHTML="";
 }
 
-/* OPEN FILE */
-function openFile(event) {
-  let file = event.target.files[0];
-  let reader = new FileReader();
+/* DARK MODE */
+function toggleDarkMode(){
+  document.body.classList.toggle("dark");
+}
 
-  reader.onload = function(e) {
-    document.getElementById("editor").innerText = e.target.result;
+/* WORD COUNT */
+editor.addEventListener("input", ()=>{
+  const text = editor.innerText;
+  const words = text.trim().split(/\s+/).filter(w=>w.length>0);
+  document.getElementById("wordCount").innerText = words.length;
+  document.getElementById("charCount").innerText = text.length;
+});
+
+/* STORAGE */
+function getNotes(){
+  return JSON.parse(localStorage.getItem("notes") || "[]");
+}
+
+function saveNotes(notes){
+  localStorage.setItem("notes", JSON.stringify(notes));
+}
+
+/* SAVE NOTE */
+function saveNote(){
+  const content = editor.innerHTML;
+  if(!content.trim()) return alert("Empty note!");
+
+  const notes = getNotes();
+  const newNote = {
+    id: Date.now(),
+    content: content,
+    preview: editor.innerText.substring(0,20)
   };
 
-  reader.readAsText(file);
+  notes.unshift(newNote);
+  saveNotes(notes);
+  renderNotes();
 }
+
+/* LOAD NOTE */
+function loadNote(id){
+  const notes = getNotes();
+  const note = notes.find(n=>n.id===id);
+  if(note) editor.innerHTML = note.content;
+}
+
+/* DELETE NOTE */
+function deleteNote(id){
+  let notes = getNotes();
+  notes = notes.filter(n=>n.id!==id);
+  saveNotes(notes);
+  renderNotes();
+}
+
+/* RENDER NOTES */
+function renderNotes(){
+  const notes = getNotes();
+  notesList.innerHTML = "";
+
+  notes.forEach(n=>{
+    const div = document.createElement("div");
+    div.className = "note";
+    
+    div.innerHTML = `
+      <span onclick="loadNote(${n.id})">${n.preview}...</span>
+      <span onclick="deleteNote(${n.id})">❌</span>
+    `;
+    
+    notesList.appendChild(div);
+  });
+}
+
+/* INIT */
+renderNotes();
 
 </script>
 
