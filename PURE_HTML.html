@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STUDENT REGISTRATION PAGE</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <hr>
+            STUDENT REGISTRATION PAGE
+            <hr>
+        </h1>
+
+    </header>
+    <section>
+        <h3>Welcome to the Student Registration Page</h3>
+        <h4>STUDENT INFORMATION.</h4>
+    </section>
+        <form action="submit_registration.php" method="post">
+            <label for="name">Name:</label>
+          
+          
+            <input type="text" id="name" name="name" placeholder="Enter first name" required><br><br>
+        <lebel for="surname">Surname :</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter surname" required><br><br>
+
+            <label for="dob">Date of Birth :</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+        </form>
+        <hr>
+        <h4>CONTACT INFORMATION.</h4>
+        <form action="submit_registration.php" method="post">
+
+            <label for="email">Email :</label>
+            <input type="email" placeholder="Enter email" required><br><br>
+
+            <label>Phone Number:</label>
+            <input type="text" placeholder="Enter phone number" required><br><br>
+
+            <input type="submit" value="SAVE & NEXT">
+        </form>
+        <hr>
+        <h4>ADDRESS INFORMATION.</h4>
+        <form action="submit_registration.php" method="post">
+           
+           <label>state</label>
+
+<select name="state">
+    <option>Select State</option>
+    <option>Maharashtra</option>
+    <option>Tamil Nadu</option>
+    <option>Panjab</option>
+    <option>Kerala</option>
+    <option>Gujarat</option>
+    <option>Rajasthan</option>
+    <option>Uttar Pradesh</option>
+    <option>Haryana</option>
+    <option>West Bengal</option>
+</select>
+<label>City: </label>
+<select id="city" name="city">
+    <option value="">Select City</option>
+    <option>Mumbai</option>
+    <option>Pune</option>
+    <option>Nagpur</option>
+    <option>Thane</option>
+    <option>Nashik</option>
+    <option>Aurangabad</option>
+    <option>Solapur</option>
+    <option>Kolhapur</option>
+    <option>Amravati</option>
+    <option>Nanded</option>
+    <option>Jalgaon</option>
+    <option>Akola</option>
+    <option>Latur</option>
+    <option>Ahmednagar</option>
+    <option>Chhatrapati Sambhajinagar</option>
+    <option>Satara</option>
+    <option>Sangli</option>
+    <option>Ratnagiri</option>
+    <option>Chandrapur</option>
+    <option>Beed</option>
+    <option>Parbhani</option>
+    <option>Dhule</option>
+    <option>Osmanabad (Dharashiv)</option>
+    <option>Buldhana</option>
+    <option>Yavatmal</option>
+    <option>Wardha</option>
+    <option>Gondia</option>
+    <option>Washim</option>
+    <option>Hingoli</option>
+    <option>Sindhudurg</option>
+    <option>Palghar</option>
+    <option>Raigad</option>
+    <option>Gadchiroli</option>
+    <option>Nandurbar</option>
+</select>
+
+            <label>PIN Code :</label>
+            <input type="text" placeholder="Enter PIN code" required><br>
+            <br>
+
+            <input type="radio" value="Rural">
+            <label for="rural">Rural</label>
+
+            <input type="radio" value="Urban">
+            <label for="urban">Urban</label>
+            <br>
+            <br>
+
+            <input type="submit" value="SAVE & NEXT">
+        <footer>
+            <p>© 2024 Student Registration. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
