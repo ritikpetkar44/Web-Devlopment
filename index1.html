@@ -1,139 +1,228 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Practicals Dashboard</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>My Practicals Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    display:flex;
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
 }
 
-/* SIDEBAR */
-.sidebar{
-    width:260px;
-    min-height:100vh;
-    background:rgba(0,0,0,0.3);
-    backdrop-filter:blur(10px);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:30px 20px;
-    border-right:1px solid rgba(255,255,255,0.1);
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 260px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    position: sticky;
+    top: 0;
 }
 
-.name{
-    margin-top:20px;
-    font-size:18px;
-    font-weight:600;
-    color:#00e5ff;
-    text-align:center;
+.name {
+    text-align: center;
+    color: #00e5ff;
 }
 
-.links{
-    margin-top:15px;
-    text-align:center;
+.name h3 {
+    font-size: 17px;
+    font-weight: 400;
 }
 
-.links a{
-    display:block;
-    text-decoration:none;
-    color:#cfd8dc;
-    margin:6px 0;
-    font-size:14px;
-    transition:0.3s;
+.name p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.links a:hover{
-    color:#00e5ff;
+.name hr {
+    margin-top: 15px;
+    width: 150px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
 }
 
-/* MAIN */
-.main{
-    flex:1;
-    padding:30px;
+.links {
+    margin-top: 25px;
+    text-align: center;
 }
 
-.main-title{
-    font-size:34px;
-    margin-bottom:20px;
-    text-align:center;
+.links a {
+    display: block;
+    text-decoration: none;
+    color: #cfd8dc;
+    margin: 12px 0;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-.section-title{
-    font-size:24px;
-    margin:20px 0 10px;
-    border-left:4px solid #00e5ff;
-    padding-left:10px;
+.links a:hover {
+    color: #00e5ff;
+    transform: translateX(3px);
 }
 
-ul{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-    padding:20px 0;
-    list-style:none;
+/* ================= MAIN ================= */
+
+.main {
+    flex: 1;
+    padding: 40px;
+    width: 100%;
 }
 
-li a{
-    display:block;
-    text-decoration:none;
-    color:white;
-    background:rgba(255,255,255,0.08);
-    padding:25px;
-    border-radius:15px;
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.1);
-    transition:0.3s;
+.main-title {
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-.card-title{
-    font-size:18px;
-    font-weight:600;
+.section-title {
+    font-size: 24px;
+    font-weight: 500;
+
+    margin: 25px 0 10px;
+
+    border-left: 4px solid #00e5ff;
+    padding-left: 12px;
 }
 
-.card-desc{
-    font-size:13px;
-    margin-top:10px;
-    color:#bfefff;
-    opacity:0;
-    transform:translateY(12px);
-    transition:0.4s ease;
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+    padding: 20px 0;
+    list-style: none;
 }
 
-li a:hover{
-    transform:translateY(-10px) scale(1.05);
-    background:rgba(0,229,255,0.18);
-    border:1px solid #00e5ff;
-    box-shadow:0 10px 25px rgba(0,229,255,0.4);
+.card {
+    display: block;
+
+    text-decoration: none;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 25px;
+
+    min-height: 120px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: all 0.3s ease;
 }
 
-li a:hover .card-desc{
-    opacity:1;
-    transform:translateY(0);
+.card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(0, 229, 255, 0.18);
+
+    border-color: #00e5ff;
+
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.35);
 }
 
-@media(max-width:768px){
-    body{
-        flex-direction:column;
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 13px;
+    margin-top: 10px;
+
+    color: #bfefff;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+}
+
+.card:hover .card-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
     }
-    .sidebar{
-        width:100%;
-        flex-direction:row;
-        justify-content:center;
-        gap:20px;
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+
+        position: relative;
+
+        padding: 25px 15px;
+
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .links {
+        display: flex;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+    .links a {
+        margin: 0;
+    }
+
+    .main {
+        padding: 25px 18px;
+    }
+
+    .main-title {
+        font-size: 26px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -141,83 +230,211 @@ li a:hover .card-desc{
 
 <body>
 
-<div class="sidebar">
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
     <div class="name">
         <h3>Created by</h3>
-        <br>
-        MR. YASH PETKAR
+        <p>MR. YASH PETKAR</p>
         <hr>
     </div>
 
     <div class="links">
-        <!-- external links can stay same tab or add target="_blank" if you want -->
-        <a href="https://github.com/ritikpetkar44">GitHub : ritikpetkar44</a>
-        <a href="https://www.linkedin.com/">LinkedIn : Yash Petkar</a>
+
+        <a href="https://github.com/ritikpetkar44"
+           target="_blank"
+           rel="noopener noreferrer">
+            GitHub : ritikpetkar44
+        </a>
+
+        <a href="https://www.linkedin.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+            LinkedIn : Yash Petkar
+        </a>
+
     </div>
-</div>
 
-<div class="main">
+</aside>
 
-<h1 class="main-title">My Web Design Practicals</h1>
 
-<h2 class="section-title">Practicals</h2>
+<!-- ================= MAIN ================= -->
 
-<ul>
+<main class="main">
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_01.html"><div class="card-title">Practical 1</div><div class="card-desc">GitHub setup & repository creation</div></a></li>
+    <h1 class="main-title">
+        My Web Design Practicals
+    </h1>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_02.html"><div class="card-title">Practical 2</div><div class="card-desc">HTML semantic structure</div></a></li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_03.html"><div class="card-title">Practical 3</div><div class="card-desc">Text, images, lists, links</div></a></li>
+    <!-- PRACTICALS -->
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_04.html"><div class="card-title">Practical 4</div><div class="card-desc">Tables & structured data</div></a></li>
+    <h2 class="section-title">
+        Practicals
+    </h2>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_05.html"><div class="card-title">Practical 5</div><div class="card-desc">Resume webpage</div></a></li>
+    <ul class="cards">
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_06.html"><div class="card-title">Practical 6</div><div class="card-desc">Forms & validation</div></a></li>
+        <li>
+            <a class="card" href="Practical_01.html">
+                <div class="card-title">Practical 1</div>
+                <div class="card-desc">
+                    GitHub setup & repository creation
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_07.html"><div class="card-title">Practical 7</div><div class="card-desc">CSS styling page</div></a></li>
+        <li>
+            <a class="card" href="Practical_02.html">
+                <div class="card-title">Practical 2</div>
+                <div class="card-desc">
+                    HTML semantic structure
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_8/yash.html"><div class="card-title">Practical 8</div><div class="card-desc">Image gallery & hover effects</div></a></li>
+        <li>
+            <a class="card" href="Practical_03.html">
+                <div class="card-title">Practical 3</div>
+                <div class="card-desc">
+                    Text, images, lists, links
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_09.html"><div class="card-title">Practical 9</div><div class="card-desc">Responsive design</div></a></li>
+        <li>
+            <a class="card" href="Practical_04.html">
+                <div class="card-title">Practical 4</div>
+                <div class="card-desc">
+                    Tables & structured data
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_10.html"><div class="card-title">Practical 10</div><div class="card-desc">Iframe embedding</div></a></li>
+        <li>
+            <a class="card" href="Practical_05.html">
+                <div class="card-title">Practical 5</div>
+                <div class="card-desc">
+                    Resume webpage
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_11.html"><div class="card-title">Practical 11</div><div class="card-desc">HTML5 APIs</div></a></li>
+        <li>
+            <a class="card" href="Practical_06.html">
+                <div class="card-title">Practical 6</div>
+                <div class="card-desc">
+                    Forms & validation
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_12.html"><div class="card-title">Practical 12</div><div class="card-desc">Bootstrap UI</div></a></li>
+        <li>
+            <a class="card" href="Practical_07.html">
+                <div class="card-title">Practical 7</div>
+                <div class="card-desc">
+                    CSS styling page
+                </div>
+            </a>
+        </li>
 
-<li><a href="https://ritikpetkar44.github.io/Web-Devlopment/Practical_13.html"><div class="card-title">Practical 13</div><div class="card-desc">Full responsive project</div></a></li>
+        <li>
+            <a class="card" href="Practical_8/yash.html">
+                <div class="card-title">Practical 8</div>
+                <div class="card-desc">
+                    Image gallery & hover effects
+                </div>
+            </a>
+        </li>
 
-</ul>
+        <li>
+            <a class="card" href="Practical_09.html">
+                <div class="card-title">Practical 9</div>
+                <div class="card-desc">
+                    Responsive design
+                </div>
+            </a>
+        </li>
 
-<h2 class="section-title">Experiential Learning</h2>
+        <li>
+            <a class="card" href="Practical_10.html">
+                <div class="card-title">Practical 10</div>
+                <div class="card-desc">
+                    Iframe embedding
+                </div>
+            </a>
+        </li>
 
-<ul>
-<li>
-<a href="https://ritikpetkar44.github.io/Web-Devlopment/expriential_1.html">
-<div class="card-title">Elementary</div>
-<div class="card-desc">Basic concepts and structure</div>
-</a>
-</li>
+        <li>
+            <a class="card" href="Practical_11.html">
+                <div class="card-title">Practical 11</div>
+                <div class="card-desc">
+                    HTML5 APIs
+                </div>
+            </a>
+        </li>
 
-<li>
-<a href="https://ritikpetkar44.github.io/Web-Devlopment/expriential_2.html">
-<div class="card-title">Intermediate</div>
-<div class="card-desc">UI design and layouts</div>
-</a>
-</li>
+        <li>
+            <a class="card" href="Practical_12.html">
+                <div class="card-title">Practical 12</div>
+                <div class="card-desc">
+                    Bootstrap UI
+                </div>
+            </a>
+        </li>
 
-<li>
-<a href="https://ritikpetkar44.github.io/Web-Devlopment/expriential_3.html">
-<div class="card-title">Advanced</div>
-<div class="card-desc">Complete responsive project</div>
-</a>
-</li>
-</ul>
+        <li>
+            <a class="card" href="Practical_13.html">
+                <div class="card-title">Practical 13</div>
+                <div class="card-desc">
+                    Full responsive project
+                </div>
+            </a>
+        </li>
 
-</div>
+    </ul>
+
+
+    <!-- EXPERIENTIAL LEARNING -->
+
+    <h2 class="section-title">
+        Experiential Learning
+    </h2>
+
+    <ul class="cards">
+
+        <li>
+            <a class="card" href="expriential_1.html">
+                <div class="card-title">Elementary</div>
+                <div class="card-desc">
+                    Basic concepts and structure
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a class="card" href="expriential_2.html">
+                <div class="card-title">Intermediate</div>
+                <div class="card-desc">
+                    UI design and layouts
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a class="card" href="expriential_3.html">
+                <div class="card-title">Advanced</div>
+                <div class="card-desc">
+                    Complete responsive project
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+</main>
 
 </body>
 </html>
+```
